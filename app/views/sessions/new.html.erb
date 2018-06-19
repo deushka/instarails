@@ -1,13 +1,3 @@
-
-<% if flash[:error] %>
-	<h2> <%= flash[:error] %> </h2>
-<%end%>
-<%= form_for(:session, url: login_path) do |x|%>
-	<%= x.text_field :login, placeholder: "username or email" %>
-	<%= x.password_field :password, placeholder: "password" %>
-	<%= x.submit "Login" %>
-<%end%>
-
 <% if flash[:error] %>
 	<h2><%= flash[:error] %></h2>
 <% end%>
