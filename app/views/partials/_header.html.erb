@@ -8,12 +8,6 @@
   <li>
     <a href="/contact">Contact</a>
   </li>
-  <li>
-  	<% if signed_in?%>
-  		<a href="/logout">Log out</a>
-  	<%else%>
-  	<%end%>
-  </li>
   <% if signed_in? %>
   	<li><%= link_to "Logout", logout_path, method: :delete %></li>
   <% else %>
