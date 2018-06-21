@@ -3,6 +3,7 @@
 
 <div class="jumbotron">
 	<% if signed_in? %>
+		<img src= <%= current_user.avatar%> alt="">
 		<h2><%= current_user.username %></h2>
 	<% else %>
 		<h1>Welcome to Intagram!</h1>
