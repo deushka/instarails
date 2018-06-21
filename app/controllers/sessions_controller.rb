@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
 	def new
+
 	end
 
 	def create
@@ -10,12 +11,13 @@ class SessionsController < ApplicationController
 		else
 			user = User.find_by_username(login)
 		end
+
 		if user && user.authenticate(params[:session][:password])
 			sign_in user
 			redirect_to user
 		else
+			flash[:danger] = "Invalid username or password"
 			render "new"
-			flash[:error] = "Invalid username or password"
 		end
 	end
 
