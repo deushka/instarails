@@ -19,8 +19,7 @@ class Post < ApplicationRecord
 
 	default_scope -> {order "created_at DESC"}
 
-
 	def liked?(user_id)
-			likes.where(user_id: user_id).count > 0
+		likes.where(user_id: user_id).count > 0
 	end
 end
