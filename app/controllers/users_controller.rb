@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	def index 
+	def index
 		@users = User.all
 	end
 
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 	end
 
 	def update
+		@user = user_params
 	end
 
 	def destroy
